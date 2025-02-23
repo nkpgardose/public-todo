@@ -4,7 +4,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 > **Prevent tech debt by always running the following**:
 > - check and update `.nvmrc` node version
 > - `npm update --save` to keep the project up to date.
-> - `npx storybook@latest upgrade` to keep the storybook up to date.
 
 ## Getting Started
 
