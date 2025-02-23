@@ -1,5 +1,10 @@
 import { sql } from 'drizzle-orm';
 import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import {
+	createSelectSchema,
+	createInsertSchema,
+	createUpdateSchema,
+} from 'drizzle-zod';
 
 export const todoTable = sqliteTable('todos', {
 	id: text('id')
@@ -14,3 +19,7 @@ export const todoTable = sqliteTable('todos', {
 		.default(sql`(strftime('%s', 'now'))`)
 		.$onUpdate(() => new Date()),
 });
+
+export const todoSelectScheme = createSelectSchema(todoTable);
+export const todoInsertSchema = createInsertSchema(todoTable);
+export const todoUpdateSchema = createUpdateSchema(todoTable);
