@@ -18,11 +18,11 @@ export default function Home() {
 				<p>
 					A simple todo list built with Next.js using Page routing approach.
 					<br />
-					Start listing your todo <Link href="/todo/">here</Link>.
+					Start listing your todo <Link href="/todo">here</Link>.
 				</p>
 				<p>
 					See example of server side page rendering{' '}
-					<Link href="/hello/">here</Link>.
+					<Link href="/hello">here</Link>.
 				</p>
 			</section>
 		</>
