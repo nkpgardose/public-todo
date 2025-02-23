@@ -10,6 +10,8 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.39.3",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -20,6 +22,7 @@
     "@types/node": "^20.17.19",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "drizzle-kit": "^0.30.4",
     "eslint": "^9.21.0",
     "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "^10.0.1",
