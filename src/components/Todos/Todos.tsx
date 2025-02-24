@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect, FormEvent } from 'react';
 
+/* eslint-disable no-unused-vars */
 enum TodoStatuses {
 	LOADING = 'loading',
 	DEFAULT = 'default',
