@@ -8,6 +8,20 @@
       "when": 1740342850300,
       "tag": "0000_lonely_elektra",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1740346847171,
+      "tag": "0001_shocking_shockwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1740422824228,
+      "tag": "0002_military_giant_girl",
+      "breakpoints": true
     }
   ]
 }

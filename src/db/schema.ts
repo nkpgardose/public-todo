@@ -10,8 +10,8 @@ export const todoTable = sqliteTable('todos', {
 	id: text('id')
 		.primaryKey()
 		.$defaultFn(() => crypto.randomUUID()),
-	name: text('title').notNull(),
-	description: text('title').unique().notNull(),
+	title: text('title').notNull(),
+	description: text('description').notNull(),
 	createdAt: integer('created_at', { mode: 'timestamp' })
 		.default(sql`(strftime('%s', 'now'))`)
 		.notNull(),
@@ -20,6 +20,6 @@ export const todoTable = sqliteTable('todos', {
 		.$onUpdate(() => new Date()),
 });
 
-export const todoSelectScheme = createSelectSchema(todoTable);
+export const todoSelectSchema = createSelectSchema(todoTable);
 export const todoInsertSchema = createInsertSchema(todoTable);
 export const todoUpdateSchema = createUpdateSchema(todoTable);

@@ -14,11 +14,11 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<section>
-				<h1>Public Todo</h1>
+				<h1>Public Todos</h1>
 				<p>
 					A simple todo list built with Next.js using Page routing approach.
 					<br />
-					Start listing your todo <Link href="/todo">here</Link>.
+					Start listing your todo <Link href="/todos">here</Link>.
 				</p>
 				<p>
 					See example of server side page rendering{' '}
