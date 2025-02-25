@@ -7,7 +7,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, setup your db, in your env:
+
+```
+# create your .env in the root folder
+TURSO_DATABASE_URL=file:local.sqlite
+```
+
+Next, add a `local.sqlite` file in your root folder.
+
+```bash
+$ npm run db:generate # generate a migration when schema have(/src/db/schema.ts)
+$ npm run db:migrate # perform db migration based on `src/migrations` dir.
+```
+
+> [!NOTE]
+> `migrations` folder is self generated and no manual changes happening there.
+> It's the result of running `db:generate` if you have updated the schema in `src/db/schema.ts`
+
+
+run the development server:
 
 ```bash
 npm run dev
