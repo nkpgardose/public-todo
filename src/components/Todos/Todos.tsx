@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
 
 /* eslint-disable no-unused-vars */
 enum TodoStatuses {
@@ -33,21 +33,6 @@ function Todos({ todos }: TodosProps) {
 	const [todosState, setTodoState] = useState<TodoStatuses>(
 		TodoStatuses.DEFAULT
 	);
-
-	useEffect(() => {
-		setTodoState(TodoStatuses.LOADING);
-
-		fetch('/api/todos')
-			.then((response) => response.json())
-			.then((data) => {
-				console.log(data);
-				setTodoState(TodoStatuses.SUCCESS);
-			})
-			.catch((error) => {
-				console.error(error);
-				setTodoState(TodoStatuses.ERROR);
-			});
-	}, []);
 
 	function onFormSubmit(event: FormEvent<TodoFormElement>) {
 		event.preventDefault();
